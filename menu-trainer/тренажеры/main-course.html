@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренажер: Основное меню</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <a href="../index.html" class="back-link">← Назад в меню</a>
+
+    <!-- Блок переключения режимов -->
+    <div class="modes-container">
+        <button id="mode-photo" class="mode-btn active" onclick="changeMode('photo')">По фото</button>
+        <button id="mode-composition" class="mode-btn" onclick="changeMode('composition')">По составу</button>
+        <button id="mode-details" class="mode-btn" onclick="changeMode('details')">Фишки & Соусы</button>
+        <button id="mode-missing" class="mode-btn" onclick="changeMode('missing')">Чего не хватает?</button>
+    </div>
+
+    <!-- Контейнер карточки тренажера -->
+    <div class="quiz-card">
+        
+        <div class="quiz-header">
+            <span id="current-category">Раздел: Основное</span>
+            <span id="score-counter">Загрузка...</span>
+        </div>
+
+        <div id="image-block" class="image-container">
+            <img id="dish-image" src="" alt="Фото блюда">
+        </div>
+
+        <div class="quiz-question">
+            <h2 id="question-text">Загрузка вопроса...</h2>
+        </div>
+
+        <div id="answers-block" class="answers-container"></div>
+        
+    </div>
+
+    <script src="../js/dishes.js"></script>
+    <script src="../js/quiz-engine.js"></script>
+</body>
+</html>
